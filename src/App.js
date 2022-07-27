@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./Header";
+import Current from "./Current";
 import Footer from "./Footer";
 
 export default function App() {
@@ -8,7 +9,7 @@ export default function App() {
       <div className="container">
         <div className="card">
           <Header />
-          <h1>Weather App</h1>
+          <Current />
           <Footer />
         </div>
       </div>
