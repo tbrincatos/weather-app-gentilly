@@ -7,6 +7,7 @@ export default function Footer() {
         <a
           href="https://github.com/tbrincatos/weather-app-gentilly"
           target="_blank"
+          rel="noreferrer"
           title="Go to GitHub account"
         >
           Open-source code
@@ -15,6 +16,7 @@ export default function Footer() {
         <a
           href="https://chimerical-babka-82bcda.netlify.app/"
           target="_blank"
+          rel="noreferrer"
           title="Visit Portfolio"
         >
           Tamsin Brincat 👩‍🦰
