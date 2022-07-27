@@ -9,7 +9,15 @@ export default function Footer() {
           target="_blank"
           title="Go to GitHub account"
         >
-          Open-source code by Tamsin Brincat👩‍🦰
+          Open-source code
+        </a>{" "}
+        by{" "}
+        <a
+          href="https://chimerical-babka-82bcda.netlify.app/"
+          target="_blank"
+          title="Visit Portfolio"
+        >
+          Tamsin Brincat👩‍🦰
         </a>
       </footer>
     </div>
