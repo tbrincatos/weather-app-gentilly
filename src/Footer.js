@@ -17,7 +17,7 @@ export default function Footer() {
           target="_blank"
           title="Visit Portfolio"
         >
-          Tamsin Brincat👩‍🦰
+          Tamsin Brincat 👩‍🦰
         </a>
       </footer>
     </div>

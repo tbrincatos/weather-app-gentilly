@@ -1,0 +1,10 @@
+.Header form .search,
+.Header form .search-button,
+.Header form .location-button {
+  background: transparent;
+  border: 1px solid rgb(194, 188, 188);
+  border-radius: 4px;
+}
+.Header form .location-button {
+  padding: 1px 8.5px;
+}
