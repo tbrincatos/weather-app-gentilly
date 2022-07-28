@@ -17,6 +17,16 @@
   border: 1px solid rgb(194, 188, 188);
   border-radius: 4px;
 }
+.Header form .search-button,
+.Header form .location-button {
+  transition: all 150ms ease;
+  margin-left: 2px;
+}
+.Header form .search-button:hover,
+.Header form .location-button:hover {
+  cursor: pointer;
+  background-color: rgb(194, 188, 188);
+}
 .Header form .location-button {
   padding: 1px 8.5px;
 }

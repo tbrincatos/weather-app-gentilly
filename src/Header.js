@@ -14,7 +14,7 @@ export default function Header() {
               placeholder="Enter a city"
               className="search"
             />
-            <input type="submit" value="🔍" className="search-button" />
+            <input type="submit" value="🔍" className="search-button " />
             <button className="location-button">📍</button>
           </form>
         </div>
