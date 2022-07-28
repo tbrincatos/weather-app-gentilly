@@ -10,8 +10,8 @@ export default function App() {
         <div className="card">
           <Header />
           <Current />
-          <Footer />
         </div>
+        <Footer />
       </div>
     </div>
   );

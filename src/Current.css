@@ -1,0 +1,29 @@
+.Current h1,
+.Current h4 {
+  font-family: "Indie Flower", cursive;
+}
+.Current h1 {
+  font-size: 80px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  padding-top: 120px;
+}
+.Current h4 {
+  font-size: 24px;
+  font-weight: bolder;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.Current h5,
+.Current h2 {
+  margin-bottom: 0;
+}
+
+.Current h2 {
+  font-size: 50px;
+  display: inline;
+}
+.Current sup {
+  top: -2.3em;
+}
