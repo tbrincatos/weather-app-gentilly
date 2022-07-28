@@ -13,6 +13,7 @@ export default function Header() {
               type="search"
               placeholder="Enter a city"
               className="search"
+              autoFocus="on"
             />
             <input type="submit" value="🔍" className="search-button " />
             <button className="location-button">📍</button>

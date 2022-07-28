@@ -21,8 +21,8 @@
 }
 
 .Current h2 {
-  font-size: 50px;
   display: inline;
+  font-size: 50px;
 }
 .Current sup {
   top: -2.3em;
