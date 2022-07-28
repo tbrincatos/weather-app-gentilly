@@ -1,14 +1,17 @@
 import React, { useState } from "react";
+import Current from "./Current";
 import axios from "axios";
 import "./Header.css";
 
 export default function Header() {
+  const [ready, setReady] = useState(false);
   function handleSubmit(event) {
     event.preventDefault();
   }
   function handleChange(event) {
     console.log(event.target.value);
   }
+
   return (
     <div className="Header">
       <div className="d-flex justify-content-between">
@@ -38,6 +41,7 @@ export default function Header() {
           </form>
         </div>
       </div>
+      <Current city="Tokyo" />
     </div>
   );
 }

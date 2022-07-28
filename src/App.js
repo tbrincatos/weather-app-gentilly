@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import Header from "./Header";
-import Current from "./Current";
 import Footer from "./Footer";
 
 export default function App() {
@@ -10,7 +9,6 @@ export default function App() {
       <div className="container">
         <div className="card">
           <Header />
-          <Current />
         </div>
         <Footer />
       </div>
