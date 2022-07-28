@@ -11,7 +11,7 @@ export default function Header() {
     event.preventDefault();
     let cityInput = city;
     cityInput = cityInput.trim().toLowerCase();
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=celsius&appid=$62f780f73f5ee00aa0f4d27f32e096c2`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=celsius&appid=62f780f73f5ee00aa0f4d27f32e096c2`;
     if (cityInput) {
       axios.get(apiUrl).then(handleData);
     }
@@ -34,8 +34,13 @@ export default function Header() {
               autoFocus="on"
               onChange={handleChange}
             />
-            <input type="submit" value="🔍" className="search-button " />
-            <button className="location-button">
+            <input
+              type="submit"
+              value="🔍"
+              className="search-button"
+              title="Search Location"
+            />
+            <button className="location-button" title="Current location">
               <span role="img" aria-label="location">
                 📍
               </span>
