@@ -16,7 +16,7 @@ export default function Header() {
     <div className="Header">
       <div className="d-flex justify-content-between">
         <div>
-          <h4>Wed 27 July 2022 10:37</h4>
+          <h4>Wed 27 July 2022 10:37 Batix</h4>
         </div>
         <div>
           <form onSubmit={handleSubmit}>
