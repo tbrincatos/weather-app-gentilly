@@ -15,8 +15,7 @@ export default function Header() {
       temperature: {response.data.main.temp},
       description: {response.data.weather[0].description}
       
-      }
-
+      
     })
   }
   function handleSubmit(event) {
