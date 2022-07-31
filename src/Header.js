@@ -9,49 +9,96 @@ export default function Header() {
   let city = "Paris";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?=${city}&units=${unit}&appid=${apiKey}`;
   const [ready, setReady] = useState(false);
+  const [report, setReport] = useState({});
+  function showReport(response) {
+    setReport({
+      temperature: {response.data.main.temp},
+      description: {response.data.weather[0].description}
+      
+      }
+
+    })
+  }
   function handleSubmit(event) {
     event.preventDefault();
   }
   function handleChange(event) {
     console.log(event.target.value);
   }
-
-  return (
-    <div>
-      <div className="Header">
-        <div className="d-flex justify-content-between">
-          <div>
-            <h4>Wed 27 July 2022 10:37</h4>
-          </div>
-          <div>
-            <form onSubmit={handleSubmit}>
-              <input
-                type="search"
-                placeholder="Enter a city"
-                className="search"
-                autoFocus="on"
-                onChange={handleChange}
-              />
-              <input
-                type="submit"
-                value="🔍"
-                className="search-button"
-                title="Search Location"
-              />
-              <button className="location-button" title="Current location">
-                <span role="img" aria-label="location">
-                  📍
-                </span>
-              </button>
-            </form>
+  if (ready) {
+    return (
+      <div>
+        <div className="Header">
+          <div className="d-flex justify-content-between">
+            <div>
+              <h4>Wed 27 July 2022 10:37</h4>
+            </div>
+            <div>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="search"
+                  placeholder="Enter a city"
+                  className="search"
+                  autoFocus="on"
+                  onChange={handleChange}
+                />
+                <input
+                  type="submit"
+                  value="🔍"
+                  className="search-button"
+                  title="Search Location"
+                />
+                <button className="location-button" title="Current location">
+                  <span role="img" aria-label="location">
+                    📍
+                  </span>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
+        <h1>Paris</h1>
+        <h4>Cloudy</h4>
+        <h5>33km/h</h5>
+        <h2>25</h2>
+        <sup>°C</sup>
       </div>
-      <h1>Paris</h1>
-      <h4>Cloudy</h4>
-      <h5>33km/h</h5>
-      <h2>25</h2>
-      <sup>°C</sup>
-    </div>
-  );
+    );
+  } else {
+    axios.get(apiUrl).then(showReport);
+    return (
+      <div>
+        <div className="Header">
+          <div className="d-flex justify-content-between">
+            <div>
+              <h4>Wed 27 July 2022 10:37</h4>
+            </div>
+            <div>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="search"
+                  placeholder="Enter a city"
+                  className="search"
+                  autoFocus="on"
+                  onChange={handleChange}
+                />
+                <input
+                  type="submit"
+                  value="🔍"
+                  className="search-button"
+                  title="Search Location"
+                />
+                <button className="location-button" title="Current location">
+                  <span role="img" aria-label="location">
+                    📍
+                  </span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <h2>Loading</h2>
+      </div>
+    );
+  }
 }
