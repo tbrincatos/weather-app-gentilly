@@ -3,11 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Header.css";
 
-export default function Header() {
-  const apiKey = `62f780f73f5ee00aa0f4d27f32e096c2`;
-  let unit = `metric`;
-  let city = "Paris";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=${apiKey}`;
+export default function Header(props) {
   const [ready, setReady] = useState(false);
   const [report, setReport] = useState({});
   function showReport(response) {
@@ -66,7 +62,10 @@ export default function Header() {
       </div>
     );
   } else {
-    axios.get(apiUrl).then(showReport);
+    const apiKey = `fb13efb36d4b4eeedd6f509b108d4732`;
+    let unit = `metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=${unit}&appid=${apiKey}`;
+    /*axios.get(apiUrl).then(showReport);*/
     return (
       <div>
         <div className="Header">
