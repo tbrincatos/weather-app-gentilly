@@ -1,12 +1,8 @@
-.Header h4,
 .Header form .search {
   font-size: medium;
   margin-bottom: 0;
 }
-.Header h4 {
-  line-height: 2;
-}
-.Header form .search,
+.Header eader form .search,
 .Header form .search-button,
 .Header form .location-button {
   background: transparent;

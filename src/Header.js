@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Timestamp from "./Timestamp";
 import axios from "axios";
 import "./Header.css";
 
@@ -12,6 +12,7 @@ export default function Header(props) {
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       temperature: response.data.main.temp,
+      timestamp: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
     });
   }
@@ -27,7 +28,7 @@ export default function Header(props) {
         <div className="Header">
           <div className="d-flex justify-content-between">
             <div>
-              <h4>Wed 27 July 2022 10:37</h4>
+              <Timestamp timestamp={report.timestamp} />
             </div>
             <div>
               <form onSubmit={handleSubmit}>
