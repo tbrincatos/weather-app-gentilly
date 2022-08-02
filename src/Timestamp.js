@@ -1,7 +1,6 @@
 import React from "react";
 import "./Timestamp.css";
 export default function Timestamp(props) {
-  console.log(props.timestamp);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
   let day = days[props.timestamp.getDay()];
   let date = props.timestamp.getDate();

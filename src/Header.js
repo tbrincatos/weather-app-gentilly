@@ -18,6 +18,19 @@ export default function Header(props) {
       wind: response.data.wind.speed,
     });
   }
+  function searchGeolocation(position) {
+    console.log(position.coords);
+    const apiKey = `62f780f73f5ee00aa0f4d27f32e096c2`;
+    let longitude = position.coords.longitude;
+    let latitude = position.coords.latitude;
+    let unit = `metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=${unit}&appid=${apiKey}`;
+    axios.get(apiUrl).then(getReport);
+  }
+  function handleGeolocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchGeolocation);
+  }
   function search() {
     const apiKey = `62f780f73f5ee00aa0f4d27f32e096c2`;
     let unit = `metric`;
@@ -54,7 +67,11 @@ export default function Header(props) {
                   className="search-button"
                   title="Search Location"
                 />
-                <button className="location-button" title="Current location">
+                <button
+                  className="location-button"
+                  title="Current location"
+                  onClick={handleGeolocation}
+                >
                   <span role="img" aria-label="location">
                     📍
                   </span>
