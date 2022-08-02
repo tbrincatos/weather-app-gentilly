@@ -19,7 +19,6 @@ export default function Header(props) {
     });
   }
   function searchGeolocation(position) {
-    console.log(position.coords);
     const apiKey = `62f780f73f5ee00aa0f4d27f32e096c2`;
     let longitude = position.coords.longitude;
     let latitude = position.coords.latitude;
