@@ -54,9 +54,9 @@ export default function Header(props) {
           </div>
         </div>
         <h1>{report.city}</h1>
-        <h4>{report.description}</h4>
+        <h4 className="text-capitalize">{report.description}</h4>
         <h5>{report.wind}km/h</h5>
-        <h2>(Math.round{report.temperature})</h2>
+        <h2>{Math.round(report.temperature)}</h2>
         <sup>°C</sup>
       </div>
     );
