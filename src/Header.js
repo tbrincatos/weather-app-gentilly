@@ -4,17 +4,16 @@ import axios from "axios";
 import "./Header.css";
 
 export default function Header(props) {
-  const [ready, setReady] = useState(false);
-  const [report, setReport] = useState({});
-  function showReport(response) {
+  const [report, setReport] = useState({ ready: false });
+  function getReport(response) {
     setReport({
+      ready: true,
       city: response.data.name,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
     });
-    setReady(ready);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -22,7 +21,7 @@ export default function Header(props) {
   function handleChange(event) {
     console.log(event.target.value);
   }
-  if (ready) {
+  if (report.ready) {
     return (
       <div>
         <div className="Header">
@@ -62,10 +61,10 @@ export default function Header(props) {
       </div>
     );
   } else {
-    const apiKey = `fb13efb36d4b4eeedd6f509b108d4732`;
+    const apiKey = `62f780f73f5ee00aa0f4d27f32e096c2`;
     let unit = `metric`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&units=${unit}&appid=${apiKey}`;
-    /*axios.get(apiUrl).then(showReport);*/
+    axios.get(apiUrl).then(getReport);
     return (
       <div>
         <div className="Header">
