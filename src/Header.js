@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Timestamp from "./Timestamp";
 import Current from "./Current";
+import Forecast from "./Forecast";
 import axios from "axios";
 import "./Header.css";
 
@@ -81,6 +82,7 @@ export default function Header(props) {
           </div>
         </div>
         <Current report={report} />
+        <Forecast />
       </div>
     );
   } else {

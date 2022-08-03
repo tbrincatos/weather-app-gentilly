@@ -9,7 +9,7 @@ export default function Current(props) {
       <div>
         {" "}
         <h4 className="text-capitalize">
-          <WeatherIcon icon={props.report.icon} />
+          <WeatherIcon icon={props.report.icon} size={20} />
           {props.report.description}
         </h4>
       </div>
