@@ -1,5 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 import "./Current.css";
 export default function Current(props) {
   return (
@@ -13,8 +14,8 @@ export default function Current(props) {
         </h4>
       </div>
       <h5>{props.report.wind}km/h</h5>
-      <h2>{Math.round(props.report.temperature)}</h2>
-      <sup>°C</sup>
+
+      <WeatherTemperature celsiusTemperature={props.report.temperature} />
     </div>
   );
 }

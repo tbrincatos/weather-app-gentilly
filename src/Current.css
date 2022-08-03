@@ -15,15 +15,6 @@
   text-transform: uppercase;
 }
 
-.Current h5,
-.Current h2 {
+.Current h5 {
   margin-bottom: 0;
-}
-
-.Current h2 {
-  display: inline;
-  font-size: 50px;
-}
-.Current sup {
-  top: -2.3em;
 }

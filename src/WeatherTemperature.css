@@ -1,0 +1,8 @@
+.WeatherTemperature h2 {
+  display: inline;
+  font-size: 50px;
+  margin-bottom: 0;
+}
+.WeatherTemperature sup {
+  top: -2.3em;
+}
