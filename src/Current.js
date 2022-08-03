@@ -14,7 +14,6 @@ export default function Current(props) {
         </h4>
       </div>
       <h5>{props.report.wind}m/s</h5>
-
       <WeatherTemperature celsiusTemperature={props.report.temperature} />
     </div>
   );

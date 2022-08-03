@@ -33,7 +33,6 @@ export default function WeatherTemperature(props) {
         <h2>{Math.round(fahrenheitTemp)}</h2>
         <sup>
           <a href="/" title="Show report in Fahrenheit" onClick={showCelsius}>
-            {" "}
             °C{" "}
           </a>
           | °F
