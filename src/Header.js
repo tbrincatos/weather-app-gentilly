@@ -13,6 +13,7 @@ export default function Header(props) {
       city: response.data.name,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
+      icon: response.data.weather[0].icon,
       temperature: response.data.main.temp,
       timestamp: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
