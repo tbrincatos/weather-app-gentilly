@@ -13,7 +13,7 @@ export default function Current(props) {
           {props.report.description}
         </h4>
       </div>
-      <h5>{props.report.wind}km/h</h5>
+      <h5>{props.report.wind}m/s</h5>
 
       <WeatherTemperature celsiusTemperature={props.report.temperature} />
     </div>
