@@ -12,6 +12,7 @@ export default function Weather(props) {
     setReport({
       ready: true,
       city: response.data.name,
+      coordinates: response.data.coord,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
       icon: response.data.weather[0].icon,
@@ -82,7 +83,7 @@ export default function Weather(props) {
           </div>
         </div>
         <WeatherCurrent report={report} />
-        <WeatherForecast />
+        <WeatherForecast coords={report.coordinates} />
       </div>
     );
   } else {

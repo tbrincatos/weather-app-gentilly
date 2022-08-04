@@ -1,6 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
-import WeatherTemperature from "./WeatherTemperature";
+import WeatherCurrentTemperature from "./WeatherCurrentTemperature";
 import "./WeatherCurrent.css";
 export default function WeatherCurrent(props) {
   return (
@@ -14,7 +14,9 @@ export default function WeatherCurrent(props) {
         </h4>
       </div>
       <h5>{props.report.wind}m/s</h5>
-      <WeatherTemperature celsiusTemperature={props.report.temperature} />
+      <WeatherCurrentTemperature
+        celsiusTemperature={props.report.temperature}
+      />
     </div>
   );
 }
