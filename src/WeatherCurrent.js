@@ -1,10 +1,10 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import WeatherTemperature from "./WeatherTemperature";
-import "./Current.css";
-export default function Current(props) {
+import "./WeatherCurrent.css";
+export default function WeatherCurrent(props) {
   return (
-    <div className="Current">
+    <div className="WeatherCurrent">
       <h1>{props.report.city}</h1>
       <div>
         {" "}

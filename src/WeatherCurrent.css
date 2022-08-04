@@ -1,20 +1,20 @@
-.Current h1,
-.Current h4 {
+.WeatherCurrent h1,
+.WeatherCurrent h4 {
   font-family: "Indie Flower", cursive;
 }
-.Current h1 {
+.WeatherCurrent h1 {
   font-size: 80px;
   margin-bottom: 0;
   padding-bottom: 10px;
   padding-top: 120px;
 }
-.Current h4 {
+.WeatherCurrent h4 {
   font-size: 24px;
   font-weight: bolder;
   margin-bottom: 3px;
   text-transform: uppercase;
 }
 
-.Current h5 {
+.WeatherCurrent h5 {
   margin-bottom: 0;
 }

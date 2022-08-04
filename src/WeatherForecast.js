@@ -1,9 +1,9 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
-import "./Forecast.css";
-export default function Forecast() {
+import "./WeatherForecast.css";
+export default function WeatherForecast() {
   return (
-    <div className="Forecast">
+    <div className="WeatherForecast">
       <div className="row ">
         <div className="col forecast-date">Thursday</div>
         <div className="col forecast-temp">

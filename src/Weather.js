@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import Timestamp from "./Timestamp";
-import Current from "./Current";
-import Forecast from "./Forecast";
+import WeatherCurrent from "./WeatherCurrent";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
-import "./Header.css";
+import "./Weather.css";
 
-export default function Header(props) {
+export default function Weather(props) {
   const [city, setCity] = useState(props.city);
   const [report, setReport] = useState({ ready: false });
   function getReport(response) {
@@ -48,7 +48,7 @@ export default function Header(props) {
   if (report.ready) {
     return (
       <div>
-        <div className="Header">
+        <div className="Weather">
           <div className="d-flex justify-content-between">
             <div>
               <Timestamp timestamp={report.timestamp} />
@@ -81,8 +81,8 @@ export default function Header(props) {
             </div>
           </div>
         </div>
-        <Current report={report} />
-        <Forecast />
+        <WeatherCurrent report={report} />
+        <WeatherForecast />
       </div>
     );
   } else {

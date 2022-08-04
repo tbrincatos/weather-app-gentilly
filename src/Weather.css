@@ -1,0 +1,24 @@
+.Weather form .search {
+  font-size: medium;
+  margin-bottom: 0;
+}
+.Weather eader form .search,
+.Weather form .search-button,
+.Weather form .location-button {
+  background: transparent;
+  border: 1px solid rgb(194, 188, 188);
+  border-radius: 4px;
+}
+.Weather form .search-button,
+.Weather form .location-button {
+  transition: all 150ms ease;
+  margin-left: 2px;
+}
+.Weather form .search-button:hover,
+.Weather form .location-button:hover {
+  cursor: pointer;
+  background-color: rgb(194, 188, 188);
+}
+.Weather form .location-button {
+  padding: 1px 8.5px;
+}
