@@ -18,3 +18,11 @@
 .WeatherCurrent h5 {
   margin-bottom: 0;
 }
+@media (max-width: 576px) {
+  .WeatherCurrent h1 {
+    font-size: 60px;
+  }
+  .WeatherCurrent h5 {
+    font-size: 1rem;
+  }
+}

@@ -6,3 +6,11 @@
 .WeatherCurrentTemperature sup {
   top: -2.3em;
 }
+@media (max-width: 576px) {
+  .WeatherCurrentTemperature h2 {
+    font-size: 40px;
+  }
+  .WeatherCurrentTemperature sup {
+    top: -1.3em;
+  }
+}
