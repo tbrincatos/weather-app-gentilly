@@ -18,11 +18,17 @@ export default function WeatherForecast(props) {
     axios.get(apiUrl).then(getForecastReport);
   }
   if (ready) {
-    return (
-      <div className="WeatherForecast">
-        <WeatherForecastDay forecast={forecast[1]} />
-      </div>
-    );
+    {
+      forecast.map((dayForecast, index) => {
+        if ((index > 0) & (index < 6)) {
+          return (
+            <div className="WeatherForecast" key={index}>
+              <WeatherForecastDay forecast={dayForecast} />
+            </div>
+          );
+        }
+      });
+    }
   } else {
     getForecast();
     return null;
