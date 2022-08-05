@@ -31,7 +31,10 @@ export default function Timestamp(props) {
   return (
     <div className="Timestamp">
       <h4>
-        {day} {date} {month} {year} {hours}:{minutes}
+        {day} {date} {month} {year}{" "}
+        <span className="d-none d-sm-inline-block">
+          {hours}:{minutes}
+        </span>
       </h4>
     </div>
   );

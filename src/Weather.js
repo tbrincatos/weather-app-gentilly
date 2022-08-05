@@ -66,11 +66,11 @@ export default function Weather(props) {
                 <input
                   type="submit"
                   value="🔍"
-                  className="search-button"
+                  className="search-button d-none d-sm-inline-block"
                   title="Search Location"
                 />
                 <button
-                  className="location-button"
+                  className="location-button d-none d-sm-inline-block"
                   title="Current location"
                   onClick={handleGeolocation}
                 >
