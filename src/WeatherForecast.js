@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import WeatherForecastDay from "./WeatherForecastDay";
 import "./WeatherForecast.css";
 import axios from "axios";
@@ -9,6 +9,9 @@ export default function WeatherForecast(props) {
     setForecast(response.data.daily);
     setReady(true);
   }
+  useEffect(() => {
+    setReady(false);
+  }, [props.coords]);
   function getForecast() {
     const apiKey = `62f780f73f5ee00aa0f4d27f32e096c2`;
     let lon = props.coords.lon;
