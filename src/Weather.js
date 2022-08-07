@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Timestamp from "./Timestamp";
 import WeatherCurrent from "./WeatherCurrent";
 import WeatherForecast from "./WeatherForecast";
+import WeatherBackground from "./WeatherBackground";
 import axios from "axios";
 import "./Weather.css";
 
@@ -50,6 +51,7 @@ export default function Weather(props) {
     return (
       <div>
         <div className="Weather">
+          <WeatherBackground icon="01d" />
           <div className="d-flex justify-content-between">
             <div>
               <Timestamp timestamp={report.timestamp} />
