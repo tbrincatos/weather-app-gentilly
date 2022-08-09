@@ -7,9 +7,8 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <div className="card">
-          <Weather city="Paris" />
-        </div>
+        <Weather city="Paris" />
+
         <Footer />
       </div>
     </div>

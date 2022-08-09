@@ -22,3 +22,15 @@
 .Weather form .location-button {
   padding: 1px 8.5px;
 }
+.card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  max-width: 90%;
+  padding-top: 10px;
+  position: static;
+  color: #027aa0;
+}

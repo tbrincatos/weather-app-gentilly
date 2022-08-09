@@ -2,8 +2,19 @@ import React, { useState } from "react";
 import Timestamp from "./Timestamp";
 import WeatherCurrent from "./WeatherCurrent";
 import WeatherForecast from "./WeatherForecast";
-import WeatherBackground from "./WeatherBackground";
+
 import axios from "axios";
+
+import brokenOvercastClouds from "./img/brokenOvercastClouds.jpg";
+import clearDay from "./img/clearDay.jpg";
+import clearNight from "./img/clearNight.jpg";
+import fewClouds from "./img/fewClouds.jpg";
+import mist from "./img/mist.jpg";
+import nightClouds from "./img/nightClouds.jpg";
+import rain from "./img/rain.jpg";
+import snow from "./img/snow.jpg";
+import thunderstorm from "./img/thunderstorm.jpg";
+
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -20,8 +31,34 @@ export default function Weather(props) {
       temperature: response.data.main.temp,
       timestamp: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
+      backgroundImage: WeatherBackground(response.data.weather[0].icon),
     });
   }
+
+  function WeatherBackground(icon) {
+    const codeMapping = {
+      "01d": clearDay,
+      "01n": clearNight,
+      "02d": fewClouds,
+      "02n": nightClouds,
+      "03d": fewClouds,
+      "03n": nightClouds,
+      "04d": brokenOvercastClouds,
+      "04n": nightClouds,
+      "09d": rain,
+      "09n": rain,
+      "10d": rain,
+      "10n": rain,
+      "11d": thunderstorm,
+      "11n": thunderstorm,
+      "13d": snow,
+      "13n": snow,
+      "50d": mist,
+      "50n": mist,
+    };
+    return codeMapping[icon];
+  }
+
   function searchGeolocation(position) {
     const apiKey = `62f780f73f5ee00aa0f4d27f32e096c2`;
     let longitude = position.coords.longitude;
@@ -49,9 +86,13 @@ export default function Weather(props) {
   }
   if (report.ready) {
     return (
-      <div>
+      <div
+        className="card"
+        style={{
+          backgroundImage: `url(${brokenOvercastClouds})`,
+        }}
+      >
         <div className="Weather">
-          <WeatherBackground icon="01d" />
           <div className="d-flex justify-content-between">
             <div>
               <Timestamp timestamp={report.timestamp} />
