@@ -89,7 +89,7 @@ export default function Weather(props) {
       <div
         className="card"
         style={{
-          backgroundImage: `url(${brokenOvercastClouds})`,
+          backgroundImage: `url(${report.backgroundImage})`,
         }}
       >
         <div className="Weather">
