@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import axios from "axios";
+
 import Timestamp from "./Timestamp";
 import WeatherCurrent from "./WeatherCurrent";
 import WeatherForecast from "./WeatherForecast";
 
-import axios from "axios";
+import "./Weather.css";
 
 import brokenOvercastClouds from "./img/brokenOvercastClouds.jpg";
 import clearDay from "./img/clearDay.jpg";
@@ -14,8 +16,6 @@ import nightClouds from "./img/nightClouds.jpg";
 import rain from "./img/rain.jpg";
 import snow from "./img/snow.jpg";
 import thunderstorm from "./img/thunderstorm.jpg";
-
-import "./Weather.css";
 
 export default function Weather(props) {
   const [city, setCity] = useState(props.city);

@@ -19,11 +19,12 @@ export default function Footer() {
           rel="noopener noreferrer"
           title="Visit Portfolio"
         >
-          Tamsin Brincat{" "}
-          <span role="img" aria-label="girl">
-            👩‍🦰
-          </span>
+          Tamsin Brincat
         </a>
+        <span role="img" aria-label="girl">
+          {" "}
+          👩‍🦰
+        </span>
       </footer>
     </div>
   );

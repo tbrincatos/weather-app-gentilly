@@ -8,21 +8,35 @@
   padding-bottom: 10px;
   padding-top: 120px;
 }
+.WeatherCurrent h2 {
+  display: inline;
+  font-size: 50px;
+  margin-bottom: 0;
+}
 .WeatherCurrent h4 {
   font-size: 24px;
   font-weight: bolder;
   margin-bottom: 3px;
   text-transform: uppercase;
 }
-
 .WeatherCurrent h5 {
   margin-bottom: 0;
 }
+.WeatherCurrent sup {
+  top: -2.3em;
+}
+
 @media (max-width: 576px) {
   .WeatherCurrent h1 {
     font-size: 60px;
   }
+  .WeatherCurrent h2 {
+    font-size: 40px;
+  }
   .WeatherCurrent h5 {
     font-size: 1rem;
+  }
+  .WeatherCurrent sup {
+    top: -1.5em;
   }
 }
