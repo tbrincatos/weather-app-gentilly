@@ -20,21 +20,11 @@ export default function Timestamp(props) {
   ];
   let month = months[props.timestamp.getMonth()];
   let year = props.timestamp.getFullYear();
-  let hours = props.timestamp.getHours();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-  let minutes = props.timestamp.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+
   return (
     <div className="Timestamp">
       <h4>
         {day} {date} {month} {year}{" "}
-        <span className="d-none d-sm-inline-block">
-          {hours}:{minutes}
-        </span>
       </h4>
     </div>
   );
