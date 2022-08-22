@@ -1,0 +1,6 @@
+.WeatherForecastDay .forecast-date,
+.WeatherForecastDay .forecast-temp {
+  font-family: "Nunito", sans-serif;
+  font-size: large;
+  font-weight: 500;
+}

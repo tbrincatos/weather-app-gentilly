@@ -13,7 +13,7 @@ import clearNight from "./img/clearNight.jpg";
 import fewClouds from "./img/fewClouds.jpg";
 import mist from "./img/mist.jpg";
 import nightClouds from "./img/nightClouds.jpg";
-import rain from "./img/rain.jpg";
+import rain from "./img/rain.png";
 import snow from "./img/snow.jpg";
 import thunderstorm from "./img/thunderstorm.jpg";
 

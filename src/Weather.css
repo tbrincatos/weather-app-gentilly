@@ -1,7 +1,7 @@
 .Weather form .search {
   font-size: medium;
   margin-bottom: 0;
-  color: #027aa0;
+  color: #126591eb;
 }
 .Weather form .search,
 .Weather form .search-button,
@@ -33,5 +33,5 @@
   max-width: 90%;
   padding-top: 10px;
   position: static;
-  color: #027aa0;
+  color: #126591eb;
 }
